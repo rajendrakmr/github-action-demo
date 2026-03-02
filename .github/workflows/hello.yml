@@ -1,0 +1,18 @@
+#this is the action name
+name: hello
+
+#run triggers
+on:
+  push:
+    branches: [main]
+
+#these are the workflow
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello to user 
+        run: echo "Hello usesr  "
+      - name: print current user name 
+        run: echo "curret user $USER"
+      
