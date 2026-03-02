@@ -15,7 +15,7 @@ jobs:
       - name: build a docker file
         run: echo "build a docker image"
   test:
-    runs-on: test a code
+    runs-on: ubuntu-latest
     steps:
       - name: test hoga
         run: echo "testing ho rha hi "
