@@ -23,6 +23,8 @@ jobs:
             
             - name: upload stage file
               uses: actions/upload-pages-artifact@v4
+              with:
+                path: "."
             
             - name: depoy 
               uses: actions/deploy-pages@v4
