@@ -7,9 +7,13 @@ on:
 permissions: 
     pages: write
     id-token: write
+    contents: read
 jobs:
     deploy:
         runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
         steps:
             - name: checout stage
               uses: actions/checkout@v4 
@@ -18,7 +22,7 @@ jobs:
               uses: actions/configure-pages@v4
             
             - name: upload stage file
-              uses: actions/upload-pages-artifcat@v4
+              uses: actions/upload-pages-artifact@v4
             
             - name: depoy 
               uses: actions/deploy-pages@v4
