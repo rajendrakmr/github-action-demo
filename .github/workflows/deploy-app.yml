@@ -1,6 +1,10 @@
 name: Deploy Flask application
 
 on: 
+    workflow_run:
+        workflows: ["Docker Build & Push"]
+        types:
+            - completed
     workflow_dispatch:
 
 jobs:
