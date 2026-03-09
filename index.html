@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rajendra Kumar Marandi | DevOps Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,41 +15,48 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:'Inter',sans-serif;
 }
 
 body{
 background:#0f172a;
-color:#e2e8f0;
+color:white;
 line-height:1.6;
 }
 
 .container{
-width:90%;
 max-width:1100px;
 margin:auto;
+padding:40px 20px;
 }
 
-header{
-padding:60px 0;
+/* HERO */
+
+.hero{
 text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#1e293b,#020617);
 }
 
-header h1{
-font-size:40px;
-color:white;
+.hero h1{
+font-size:48px;
+font-weight:700;
+margin-bottom:10px;
 }
 
-header h2{
-font-weight:400;
+.hero span{
 color:#38bdf8;
+}
+
+.hero p{
+font-size:18px;
+color:#94a3b8;
 margin-top:10px;
 }
 
 .contact{
 margin-top:20px;
 font-size:14px;
-color:#cbd5f5;
 }
 
 .contact a{
@@ -57,36 +65,48 @@ text-decoration:none;
 margin:0 10px;
 }
 
-section{
-padding:50px 0;
+/* SECTION */
+
+.section{
+margin-top:70px;
 }
 
-.section-title{
+.section h2{
 font-size:28px;
-margin-bottom:25px;
-color:white;
-border-left:5px solid #38bdf8;
-padding-left:12px;
+margin-bottom:30px;
+color:#38bdf8;
 }
+
+/* ABOUT */
 
 .about{
-background:#111827;
+background:#1e293b;
 padding:30px;
-border-radius:10px;
+border-radius:12px;
 }
+
+/* SKILLS */
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
 gap:15px;
 }
 
 .skill{
 background:#1e293b;
 padding:15px;
-border-radius:8px;
+border-radius:10px;
 text-align:center;
+transition:0.3s;
 }
+
+.skill:hover{
+transform:translateY(-5px);
+background:#334155;
+}
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -96,14 +116,14 @@ gap:20px;
 
 .project{
 background:#1e293b;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 transition:0.3s;
 }
 
 .project:hover{
-transform:translateY(-5px);
-background:#273549;
+transform:translateY(-8px);
+background:#334155;
 }
 
 .project h3{
@@ -111,24 +131,27 @@ color:#38bdf8;
 margin-bottom:10px;
 }
 
-.project p{
-font-size:14px;
+/* EXPERIENCE */
+
+.exp-card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
 }
 
-.exp{
-margin-bottom:20px;
-background:#1e293b;
-padding:20px;
-border-radius:10px;
+.exp-card h3{
+color:#38bdf8;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
+margin-top:60px;
 padding:30px;
-margin-top:40px;
+border-top:1px solid #1e293b;
 color:#94a3b8;
-font-size:14px;
-border-top:1px solid #334155;
 }
 
 </style>
@@ -136,35 +159,42 @@ border-top:1px solid #334155;
 
 <body>
 
-<div class="container">
+<!-- HERO -->
 
-<header>
+<section class="hero">
 
-<h1>RAJENDRA KUMAR MARANDI</h1>
+<h1>Rajendra Kumar <span>Marandi</span></h1>
 
-<h2>Software Engineer | DevOps & Cloud Engineer</h2>
+<p>DevOps & Cloud Engineer | Kubernetes | AWS | Terraform | CI/CD</p>
 
 <div class="contact">
-📞 +91-7033262744 |
-✉ rajendraakmr@gmail.com |
-<a href="https://github.com/rajendrakmr">GitHub</a> |
+
+📞 +91-7033262744
+
+<a href="mailto:rajendraakmr@gmail.com">Email</a>
+
+<a href="https://github.com/rajendrakmr">GitHub</a>
+
 <a href="https://linkedin.com/in/rajendraakmr">LinkedIn</a>
+
 </div>
 
-</header>
+</section>
 
-<section>
+<div class="container">
 
-<h2 class="section-title">About Me</h2>
+<!-- ABOUT -->
+
+<section class="section">
+
+<h2>About Me</h2>
 
 <div class="about">
 
 <p>
 
-Software Engineer with <b>6.4+ years of experience</b> designing and operating
-cloud-native infrastructure on <b>AWS</b>. Experienced managing
-<b>large Kubernetes clusters (30+ nodes supporting 40+ microservices)</b>
-with GitOps-based CI/CD pipelines enabling zero-downtime deployments.
+Software Engineer with <b>6+ years of experience</b> building and operating
+cloud-native infrastructure on <b>AWS and Kubernetes</b>.
 
 </p>
 
@@ -172,10 +202,17 @@ with GitOps-based CI/CD pipelines enabling zero-downtime deployments.
 
 <p>
 
-Strong expertise in <b>Docker, Kubernetes (EKS), Terraform, ArgoCD,
-GitHub Actions, Jenkins</b> and automation tools such as
-<b>Ansible, Bash, Python</b>. Experienced in implementing
-NGINX Ingress, cert-manager and Let's Encrypt for secure production workloads.
+Experienced managing **30+ node Kubernetes clusters supporting 40+ microservices**
+with GitOps based CI/CD pipelines enabling **zero downtime deployments**.
+
+</p>
+
+<br>
+
+<p>
+
+Strong expertise in **Docker, Kubernetes, Terraform, ArgoCD, GitHub Actions,
+Jenkins, Linux, Prometheus and Grafana**.
 
 </p>
 
@@ -183,13 +220,15 @@ NGINX Ingress, cert-manager and Let's Encrypt for secure production workloads.
 
 </section>
 
-<section>
+<!-- SKILLS -->
 
-<h2 class="section-title">Technical Skills</h2>
+<section class="section">
+
+<h2>Technical Skills</h2>
 
 <div class="skills">
 
-<div class="skill">AWS (EC2, EKS, S3, IAM, VPC)</div>
+<div class="skill">AWS</div>
 <div class="skill">Kubernetes</div>
 <div class="skill">Docker</div>
 <div class="skill">Terraform</div>
@@ -199,61 +238,20 @@ NGINX Ingress, cert-manager and Let's Encrypt for secure production workloads.
 <div class="skill">Ansible</div>
 <div class="skill">Prometheus</div>
 <div class="skill">Grafana</div>
-<div class="skill">Node.js</div>
-<div class="skill">React</div>
 <div class="skill">Python</div>
 <div class="skill">Bash</div>
+<div class="skill">Node.js</div>
+<div class="skill">React</div>
 
 </div>
 
 </section>
 
-<section>
+<!-- PROJECTS -->
 
-<h2 class="section-title">Professional Experience</h2>
+<section class="section">
 
-<div class="exp">
-
-<h3>Software Engineer — Datacore Systems</h3>
-
-<p>July 2022 – Present | Kolkata, India</p>
-
-<p>
-Managing large-scale Kubernetes infrastructure and DevOps automation
-for production microservices workloads.
-</p>
-
-</div>
-
-<div class="exp">
-
-<h3>Backend Engineer — Pollysys Global Solutions</h3>
-
-<p>Dec 2020 – July 2021 | Nov 2021 – June 2022</p>
-
-</div>
-
-<div class="exp">
-
-<h3>Software Developer — Bookingjini Labs</h3>
-
-<p>Aug 2021 – Oct 2021</p>
-
-</div>
-
-<div class="exp">
-
-<h3>Associate Developer — Hachiweb</h3>
-
-<p>Jan 2020 – Dec 2020</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="section-title">Key Projects</h2>
+<h2>Highlighted Projects</h2>
 
 <div class="projects">
 
@@ -263,9 +261,8 @@ for production microservices workloads.
 
 <p>
 
-Built FastAPI-based monitoring and AWS cost analysis tool using
-<b>boto3, psutil and Docker</b>. Automated infrastructure monitoring,
-log classification and cost reporting improving visibility by 60%.
+FastAPI based DevOps utility for infrastructure monitoring,
+log analysis and AWS cost reporting using boto3 and psutil.
 
 </p>
 
@@ -273,13 +270,12 @@ log classification and cost reporting improving visibility by 60%.
 
 <div class="project">
 
-<h3>Two-Tier Banking Application Deployment</h3>
+<h3>Two Tier Banking Application</h3>
 
 <p>
 
-Containerized Spring Boot application and deployed on
-<b>AWS EKS</b> with monitoring via <b>Prometheus and Grafana</b>.
-Improved scalability and reduced incident response time.
+Spring Boot application containerized with Docker and deployed
+to Kubernetes (EKS) with Prometheus and Grafana monitoring.
 
 </p>
 
@@ -287,13 +283,12 @@ Improved scalability and reduced incident response time.
 
 <div class="project">
 
-<h3>SaaS School Management System</h3>
+<h3>SaaS School ERP (Multi-Tenant)</h3>
 
 <p>
 
-Multi-tenant SaaS ERP deployed on <b>AWS EKS</b> using
-<b>Docker, Kubernetes, ArgoCD and GitOps CI/CD pipelines</b>.
-Implemented RBAC and tenant isolation with automated monitoring.
+Multi tenant SaaS platform deployed on AWS EKS using
+Docker, Kubernetes and ArgoCD GitOps CI/CD pipelines.
 
 </p>
 
@@ -305,9 +300,8 @@ Implemented RBAC and tenant isolation with automated monitoring.
 
 <p>
 
-3-tier containerized architecture deployed on <b>AWS EKS</b>
-using <b>Terraform, Jenkins and ArgoCD</b>.
-Automated CI/CD reduced deployment time by 60%.
+3-tier microservices architecture deployed on Kubernetes
+using Terraform, Jenkins and ArgoCD for automated CI/CD.
 
 </p>
 
@@ -317,17 +311,41 @@ Automated CI/CD reduced deployment time by 60%.
 
 </section>
 
-<section>
+<!-- EXPERIENCE -->
 
-<h2 class="section-title">Education</h2>
+<section class="section">
 
-<div class="about">
+<h2>Professional Experience</h2>
 
-<p>
-Bachelor of Computer Applications (BCA) – Computer Science<br>
-Sri Dev Suman University, Uttarakhand<br>
-2017 – 2020
-</p>
+<div class="exp-card">
+
+<h3>Software Engineer — Datacore Systems</h3>
+
+<p>July 2022 – Present | Kolkata</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>Backend Engineer — Pollysys Global Solutions</h3>
+
+<p>Dec 2020 – Jul 2021 | Nov 2021 – Jun 2022</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>Software Developer — Bookingjini Labs</h3>
+
+<p>Aug 2021 – Oct 2021</p>
+
+</div>
+
+<div class="exp-card">
+
+<h3>Associate Developer — Hachiweb</h3>
+
+<p>Jan 2020 – Dec 2020</p>
 
 </div>
 
@@ -335,11 +353,13 @@ Sri Dev Suman University, Uttarakhand<br>
 
 <footer>
 
-© 2026 Rajendra Kumar Marandi | DevOps & Cloud Engineer Portfolio
+© 2026 Rajendra Kumar Marandi  
+DevOps & Cloud Engineer Portfolio
 
 </footer>
 
 </div>
 
 </body>
+
 </html>
