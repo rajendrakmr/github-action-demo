@@ -17,13 +17,13 @@ jobs:
     docker-file-scan:
         uses: ./.github/workflows/docker-scan.yml
 
-    build-and-push:
+    docker:
         needs: [ code-quality,secrets-scan,dependency-scan ,docker-file-scan]
         uses: ./.github/workflows/docker-build-push.yml
         secrets: inherit
 
     # image scan
-    trivy-image-scan:
-        needs: [ build-and-push ]
+    trivy:
+        needs: [ docker ]
         uses: ./.github/workflows/trivy-image-scan.yml
         secrets: inherit
