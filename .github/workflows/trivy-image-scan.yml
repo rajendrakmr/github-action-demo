@@ -21,4 +21,5 @@ jobs:
                 format: 'table'
                 exit-code: '1'
                 severity: 'CRITICAL'
-                trivyignore: ${{ github.workspace }}/.trivyignore
+                gnore-unfixed: true
+                trivyignores: ${{ github.workspace }}/.trivyignore
