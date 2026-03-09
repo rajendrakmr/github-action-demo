@@ -3,394 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rajendra Kumar Marandi | Senior DevOps & Cloud Engineer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>Rajendra Kumar Marandi | DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#0a0f1c;
-  --card:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.12);
-  --accent:#7c5cff;
-  --accent-soft:#a78bfa;
-  --text:#ffffff;
-  --muted:#9ca3af;
-}
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Plus Jakarta Sans',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-  background:radial-gradient(circle at 10% 20%, #1f2937, #0a0f1c 60%);
-  color:var(--text);
-  scroll-behavior:smooth;
-  overflow-x:hidden;
+background:#0f172a;
+color:#e2e8f0;
+line-height:1.6;
 }
 
-/* Soft animated glow */
-body::before{
-  content:'';
-  position:fixed;
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle,var(--accent),transparent 70%);
-  top:-200px;
-  right:-200px;
-  filter:blur(160px);
-  opacity:.4;
-  z-index:-1;
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
 }
 
-/* NAV */
-nav{
-  position:fixed;
-  width:100%;
-  padding:20px 8%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  backdrop-filter:blur(20px);
-  background:rgba(0,0,0,.4);
-  border-bottom:1px solid var(--border);
-  z-index:1000;
+header{
+padding:60px 0;
+text-align:center;
 }
 
-nav h2{
-  font-weight:800;
-  letter-spacing:2px;
+header h1{
+font-size:40px;
+color:white;
 }
 
-nav ul{
-  list-style:none;
-  display:flex;
-  gap:30px;
+header h2{
+font-weight:400;
+color:#38bdf8;
+margin-top:10px;
 }
 
-nav ul li a{
-  text-decoration:none;
-  color:var(--text);
-  position:relative;
-  transition:.3s;
+.contact{
+margin-top:20px;
+font-size:14px;
+color:#cbd5f5;
 }
 
-nav ul li a::after{
-  content:'';
-  position:absolute;
-  bottom:-5px;
-  left:0;
-  width:0%;
-  height:2px;
-  background:var(--accent);
-  transition:.3s;
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+margin:0 10px;
 }
 
-nav ul li a:hover{
-  color:var(--accent);
-}
-
-nav ul li a:hover::after{
-  width:100%;
-}
-
-/* SECTION */
 section{
-  padding:120px 8%;
+padding:50px 0;
 }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
+.section-title{
+font-size:28px;
+margin-bottom:25px;
+color:white;
+border-left:5px solid #38bdf8;
+padding-left:12px;
 }
 
-.hero h1{
-  font-size:4rem;
-  font-weight:800;
+.about{
+background:#111827;
+padding:30px;
+border-radius:10px;
 }
 
-.hero span{
-  color:var(--accent);
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
 }
 
-.hero p{
-  margin-top:25px;
-  max-width:750px;
-  color:var(--muted);
-  line-height:1.8;
-  font-size:1.1rem;
+.skill{
+background:#1e293b;
+padding:15px;
+border-radius:8px;
+text-align:center;
 }
 
-.hero-buttons{
-  margin-top:40px;
-  display:flex;
-  gap:20px;
-}
-
-.btn{
-  padding:14px 32px;
-  border-radius:50px;
-  border:1px solid var(--border);
-  background:var(--card);
-  backdrop-filter:blur(20px);
-  color:white;
-  cursor:pointer;
-  transition:.4s;
-  font-weight:600;
-}
-
-.btn:hover{
-  background:var(--accent);
-  transform:translateY(-6px);
-  box-shadow:0 15px 50px rgba(124,92,255,.4);
-}
-
-/* GLASS CARD */
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  backdrop-filter:blur(25px);
-  padding:40px;
-  border-radius:24px;
-  transition:.4s;
-}
-
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 25px 60px rgba(0,0,0,.4);
-}
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
-
-.metric{
-  text-align:center;
-  padding:40px;
-  border-radius:20px;
-  background:var(--card);
-  border:1px solid var(--border);
-  transition:.4s;
-}
-
-.metric:hover{
-  background:var(--accent);
-  transform:scale(1.05);
-}
-
-.metric h3{
-  font-size:2.5rem;
-  margin-bottom:10px;
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 }
 
 .project{
-  padding:25px;
-  border-radius:20px;
-  background:var(--card);
-  border:1px solid var(--border);
-  transition:.4s;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+transition:0.3s;
 }
 
 .project:hover{
-  transform:translateY(-15px);
-  box-shadow:0 25px 60px rgba(124,92,255,.4);
+transform:translateY(-5px);
+background:#273549;
 }
 
 .project h3{
-  color:var(--accent-soft);
-  margin-bottom:10px;
+color:#38bdf8;
+margin-bottom:10px;
 }
 
-.project ul{
-  padding-left:20px;
-  color:var(--muted);
-  line-height:1.6;
-  font-size:.95rem;
+.project p{
+font-size:14px;
 }
 
-/* TIMELINE */
-.timeline{
-  border-left:2px solid var(--accent);
-  padding-left:30px;
-  margin-top:30px;
+.exp{
+margin-bottom:20px;
+background:#1e293b;
+padding:20px;
+border-radius:10px;
 }
 
-.timeline-item{
-  margin-bottom:30px;
-}
-
-.timeline-item h4{
-  color:var(--accent-soft);
-}
-
-/* FOOTER */
 footer{
-  text-align:center;
-  padding:50px;
-  border-top:1px solid var(--border);
-  margin-top:80px;
-  color:var(--muted);
+text-align:center;
+padding:30px;
+margin-top:40px;
+color:#94a3b8;
+font-size:14px;
+border-top:1px solid #334155;
 }
 
-/* Scroll Animation */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all .8s ease;
-}
-
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-
-@media(max-width:768px){
-  .hero h1{
-    font-size:2.5rem;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<nav>
-  <h2>RKM</h2>
-  <ul>
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-  </ul>
-</nav>
+<div class="container">
 
-<section class="hero reveal">
-  <h1>Rajendra <span>Kumar</span></h1>
-  <p>
-    Senior Software Engineer transitioning into DevOps & Cloud Engineering with 6+ years of experience.
-    Specialized in AWS, Kubernetes (EKS), Terraform, Docker, CI/CD pipelines, GitOps automation,
-    observability, infrastructure reliability, and scalable production systems.
-  </p>
+<header>
 
-  <div class="hero-buttons">
-    <button class="btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
-    <button class="btn" onclick="window.location.href='mailto:rajendraakmr@gmail.com'">Contact</button>
-    <button class="btn">Download Resume</button>
-  </div>
+<h1>RAJENDRA KUMAR MARANDI</h1>
+
+<h2>Software Engineer | DevOps & Cloud Engineer</h2>
+
+<div class="contact">
+📞 +91-7033262744 |
+✉ rajendraakmr@gmail.com |
+<a href="https://github.com/rajendrakmr">GitHub</a> |
+<a href="https://linkedin.com/in/rajendraakmr">LinkedIn</a>
+</div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<p>
+
+Software Engineer with <b>6.4+ years of experience</b> designing and operating
+cloud-native infrastructure on <b>AWS</b>. Experienced managing
+<b>large Kubernetes clusters (30+ nodes supporting 40+ microservices)</b>
+with GitOps-based CI/CD pipelines enabling zero-downtime deployments.
+
+</p>
+
+<br>
+
+<p>
+
+Strong expertise in <b>Docker, Kubernetes (EKS), Terraform, ArgoCD,
+GitHub Actions, Jenkins</b> and automation tools such as
+<b>Ansible, Bash, Python</b>. Experienced in implementing
+NGINX Ingress, cert-manager and Let's Encrypt for secure production workloads.
+
+</p>
+
+</div>
+
 </section>
 
-<section id="impact" class="reveal">
-  <h2>Professional Impact</h2>
-  <div class="grid">
-    <div class="metric">
-      <h3>60%</h3>
-      <p>Deployment Time Reduced</p>
-    </div>
-    <div class="metric">
-      <h3>40%</h3>
-      <p>MTTR Reduction</p>
-    </div>
-    <div class="metric">
-      <h3>80%</h3>
-      <p>Scalability Improvement</p>
-    </div>
-  </div>
+<section>
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill">AWS (EC2, EKS, S3, IAM, VPC)</div>
+<div class="skill">Kubernetes</div>
+<div class="skill">Docker</div>
+<div class="skill">Terraform</div>
+<div class="skill">ArgoCD</div>
+<div class="skill">GitHub Actions</div>
+<div class="skill">Jenkins</div>
+<div class="skill">Ansible</div>
+<div class="skill">Prometheus</div>
+<div class="skill">Grafana</div>
+<div class="skill">Node.js</div>
+<div class="skill">React</div>
+<div class="skill">Python</div>
+<div class="skill">Bash</div>
+
+</div>
+
 </section>
 
-<section id="skills" class="reveal">
-  <h2>Core Expertise</h2>
-  <div class="grid">
-    <div class="card">Cloud: AWS, Azure, EKS</div>
-    <div class="card">Containers: Docker, Kubernetes</div>
-    <div class="card">IaC: Terraform, Ansible</div>
-    <div class="card">CI/CD: Jenkins, GitHub Actions, ArgoCD</div>
-    <div class="card">Monitoring: Prometheus, Grafana, ELK</div>
-    <div class="card">Security: SonarQube, Trivy, OWASP</div>
-  </div>
+<section>
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="exp">
+
+<h3>Software Engineer — Datacore Systems</h3>
+
+<p>July 2022 – Present | Kolkata, India</p>
+
+<p>
+Managing large-scale Kubernetes infrastructure and DevOps automation
+for production microservices workloads.
+</p>
+
+</div>
+
+<div class="exp">
+
+<h3>Backend Engineer — Pollysys Global Solutions</h3>
+
+<p>Dec 2020 – July 2021 | Nov 2021 – June 2022</p>
+
+</div>
+
+<div class="exp">
+
+<h3>Software Developer — Bookingjini Labs</h3>
+
+<p>Aug 2021 – Oct 2021</p>
+
+</div>
+
+<div class="exp">
+
+<h3>Associate Developer — Hachiweb</h3>
+
+<p>Jan 2020 – Dec 2020</p>
+
+</div>
+
 </section>
 
-<section id="projects" class="reveal">
-  <h2>Impact Projects</h2>
-  <div class="grid">
+<section>
 
-    <div class="project">
-      <h3>Multi-Tenant SaaS ERP on AWS EKS</h3>
-      <ul>
-        <li>GitOps CI/CD via ArgoCD</li>
-        <li>Monitoring with Prometheus & Grafana</li>
-        <li>RBAC & tenant isolation</li>
-        <li>Reduced MTTR by 40%</li>
-      </ul>
-    </div>
+<h2 class="section-title">Key Projects</h2>
 
-    <div class="project">
-      <h3>Infrastructure Automation (Terraform)</h3>
-      <ul>
-        <li>Provisioned production AWS environments</li>
-        <li>3-tier containerized deployments</li>
-        <li>Reduced deployment time by 60%</li>
-      </ul>
-    </div>
+<div class="projects">
 
-    <div class="project">
-      <h3>DevOps Monitoring Utility (FastAPI)</h3>
-      <ul>
-        <li>Real-time system metrics API</li>
-        <li>AWS cost tracking integration</li>
-        <li>Improved infrastructure visibility by 60%</li>
-      </ul>
-    </div>
+<div class="project">
 
-  </div>
+<h3>DevOps Monitoring & AWS Cost Analysis API</h3>
+
+<p>
+
+Built FastAPI-based monitoring and AWS cost analysis tool using
+<b>boto3, psutil and Docker</b>. Automated infrastructure monitoring,
+log classification and cost reporting improving visibility by 60%.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Two-Tier Banking Application Deployment</h3>
+
+<p>
+
+Containerized Spring Boot application and deployed on
+<b>AWS EKS</b> with monitoring via <b>Prometheus and Grafana</b>.
+Improved scalability and reduced incident response time.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>SaaS School Management System</h3>
+
+<p>
+
+Multi-tenant SaaS ERP deployed on <b>AWS EKS</b> using
+<b>Docker, Kubernetes, ArgoCD and GitOps CI/CD pipelines</b>.
+Implemented RBAC and tenant isolation with automated monitoring.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>E-Commerce Platform Deployment</h3>
+
+<p>
+
+3-tier containerized architecture deployed on <b>AWS EKS</b>
+using <b>Terraform, Jenkins and ArgoCD</b>.
+Automated CI/CD reduced deployment time by 60%.
+
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="experience" class="reveal">
-  <h2>Professional Experience</h2>
-  <div class="card">
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Software Engineer – Datacore Systems</h4>
-        <p>July 2022 – Present | Kolkata</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Backend Engineer – Pollysys Global Solutions</h4>
-        <p>2020 – 2022 | Chandigarh</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Associate Developer – Hachiweb</h4>
-        <p>2020 | Dehradun</p>
-      </div>
-    </div>
-  </div>
+<section>
+
+<h2 class="section-title">Education</h2>
+
+<div class="about">
+
+<p>
+Bachelor of Computer Applications (BCA) – Computer Science<br>
+Sri Dev Suman University, Uttarakhand<br>
+2017 – 2020
+</p>
+
+</div>
+
 </section>
 
 <footer>
-© 2026 Rajendra Kumar Marandi | Senior DevOps & Cloud Engineer
+
+© 2026 Rajendra Kumar Marandi | DevOps & Cloud Engineer Portfolio
+
 </footer>
 
-<script>
-const reveals = document.querySelectorAll('.reveal');
-
-window.addEventListener('scroll', () => {
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    if(elementTop < windowHeight - 100){
-      el.classList.add('active');
-    }
-  });
-});
-</script>
+</div>
 
 </body>
 </html>
